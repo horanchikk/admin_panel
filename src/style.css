@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tabs-enter-active,
+.tabs-leave-active {
+  transition: all 0.5s ease;
+}
+
+.tabs-enter-from,
+.tabs-leave-to {
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+*::-webkit-scrollbar {
+  height: 1px;
+}
