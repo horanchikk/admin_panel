@@ -4,7 +4,7 @@
 
 .tabs-enter-active,
 .tabs-leave-active {
-  transition: all .5s;
+  transition: all 0.5s;
   max-width: 100px;
 }
 
@@ -21,7 +21,7 @@
 
 .nav-enter-active,
 .nav-leave-active {
-  transition: all .4s;
+  transition: all 0.4s;
   max-width: 1000px;
 }
 
@@ -36,5 +36,5 @@
 }
 
 .menuBack {
-  background: linear-gradient(360deg, yellowgreen, green);
+  background: linear-gradient(360deg, yellow, purple);
 }
