@@ -1,9 +1,11 @@
 <template>
-  <div class="w-56 h-full p-5 bg-black menuBack text-xl overflow-x-scroll">
+  <div
+    class="w-56 h-full p-5 menuBack text-xl overflow-x-scroll shadow-md shadow-black"
+  >
     <div
       v-for="item in menu"
       :key="menu.indexOf(item)"
-      :class="`text-left cursor-pointer ${
+      :class="`cursor-pointer text-left ${
         item.link !== $route.path ? 'text-white' : 'text-blue-300'
       } hover:opacity-70 active:opacity-60 transition-all`"
     >

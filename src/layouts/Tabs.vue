@@ -30,7 +30,7 @@
           </div>
         </div>
         <div
-          class="px-5 py-1 flex items-center justify-between rounded-md bg-blue-700 select-none text-white bg-opacity-80 hover:bg-opacity-70 transition-all overflow-visible"
+          class="px-5 py-1 flex items-center justify-between rounded-md bg-blue-400 select-none text-white bg-opacity-80 hover:bg-opacity-70 transition-all overflow-visible"
           v-else
         >
           <div

@@ -11,6 +11,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.13",
     "pinia": "^2.0.28",
     "postcss": "^8.4.20",

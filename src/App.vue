@@ -7,10 +7,18 @@
       <Transition name="nav" mode="out-in">
         <Menu v-if="useUi().showNav" />
       </Transition>
-      <section class="flex-auto flex flex-col gap-5 py-4 px-8">
+      <section class="flex-auto flex flex-col py-4 px-8">
         <Tabs />
-        <div class="flex-auto">
-          <router-view />
+        <div class="flex-auto overflow-hidden">
+          <router-view v-slot="{ Component }">
+            <Transition
+              mode="out-in"
+              enter-active-class="windowShow"
+              leave-active-class="windowHide"
+            >
+              <component :is="Component" />
+            </Transition>
+          </router-view>
         </div>
       </section>
     </div>

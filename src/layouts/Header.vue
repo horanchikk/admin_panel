@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-10 flex items-center px-4">
+  <div class="w-full h-10 flex items-center px-4 shadow-md justify-between">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="30px"
@@ -15,6 +15,9 @@
         clip-rule="evenodd"
       />
     </svg>
+    <p class="cursor-default">
+      Logged as <strong class="cursor-default">horanchikk</strong>
+    </p>
   </div>
 </template>
 

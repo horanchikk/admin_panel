@@ -34,11 +34,13 @@ export const useUi = defineStore("ui", () => {
     },
   ]);
 
+  const theme: "dark" | "light" = "dark";
+
   function updateTabs() {
     for (let tab in tabs.value) {
       tabs.value[tab].removable = true;
     }
   }
 
-  return { showNav, tabs, updateTabs };
+  return { showNav, tabs, updateTabs, theme };
 });
