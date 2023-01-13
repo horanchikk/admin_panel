@@ -1,11 +1,12 @@
 <template>
-  <div class="w-full h-12 flex gap-5 overflow-y-hidden overflow-x-scroll">
+  <div
+    class="flex h-12 w-full items-center gap-5 overflow-y-hidden overflow-x-scroll"
+  >
     <TransitionGroup name="tabs" mode="out-in">
-      <!-- todo: better animation, when closing tabs -->
       <div v-for="tab in ui.tabs" :key="ui.tabs.indexOf(tab)" class="w-40">
         <div
           v-if="tab.link !== $route.path"
-          class="px-5 py-1 flex items-center justify-between rounded-md bg-blue-700 select-none text-white bg-opacity-80 hover:bg-opacity-70 transition-all overflow-visible"
+          class="flex select-none items-center justify-between overflow-visible rounded-md bg-blue-700 bg-opacity-80 px-5 py-1 text-white transition-all hover:bg-opacity-70"
         >
           <div
             class="cursor-pointer"
@@ -18,7 +19,7 @@
             {{ tab.name }}
           </div>
           <div
-            class="hover:opacity-70 active:opacity-40 cursor-pointer transition-all"
+            class="cursor-pointer transition-all hover:opacity-70 active:opacity-40"
             @click="ui.tabs.splice(ui.tabs.indexOf(tab), 1)"
           >
             <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
@@ -30,7 +31,7 @@
           </div>
         </div>
         <div
-          class="px-5 py-1 flex items-center justify-between rounded-md bg-blue-400 select-none text-white bg-opacity-80 hover:bg-opacity-70 transition-all overflow-visible"
+          class="flex select-none items-center justify-between overflow-visible rounded-md bg-blue-400 bg-opacity-80 px-5 py-1 text-white transition-all hover:bg-opacity-70"
           v-else
         >
           <div

@@ -1,13 +1,13 @@
 <template>
   <div
-    class="w-56 h-full p-5 menuBack text-xl overflow-x-scroll shadow-md shadow-black"
+    class="menuBack h-full w-[170px] overflow-x-scroll p-5 text-xl shadow-md shadow-black"
   >
     <div
       v-for="item in menu"
       :key="menu.indexOf(item)"
       :class="`cursor-pointer text-left ${
         item.link !== $route.path ? 'text-white' : 'text-blue-300'
-      } hover:opacity-70 active:opacity-60 transition-all`"
+      } transition-all hover:opacity-70 active:opacity-60`"
     >
       <p
         v-if="item.link !== $route.path"
@@ -34,6 +34,7 @@
 import { ref } from "vue";
 import { useUi } from "@/stores/useUi";
 import type { Ref } from "vue";
+import router from "@/router";
 
 interface menuItem {
   name: string;
@@ -41,26 +42,12 @@ interface menuItem {
 }
 
 const ui = useUi();
-const menu: Ref<menuItem[]> = ref([
-  {
-    name: "Home",
-    link: "/",
-  },
-  {
-    name: "Stats",
-    link: "/stats",
-  },
-  {
-    name: "Settings",
-    link: "/settings",
-  },
-  {
-    name: "Components",
-    link: "/components",
-  },
-  {
-    name: "System",
-    link: "/system",
-  },
-]);
+const menu: Ref<menuItem[]> = ref([]);
+
+for (let route of router.getRoutes()) {
+  menu.value.push({
+    name: route.name,
+    link: route.path,
+  });
+}
 </script>

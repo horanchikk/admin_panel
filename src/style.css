@@ -27,22 +27,35 @@
 .tabs-enter-active,
 .tabs-leave-active {
   transition: all 0.5s;
-  max-width: 100px;
 }
 
 .tabs-enter-from,
 .tabs-leave-to {
   opacity: 0;
-  transform: translateX(-20px);
-  max-width: 0px;
+  transform: translateY(20px);
+}
+
+.tabs-move {
+  position: relative;
+}
+
+.profile-enter-active,
+.profile-leave-active {
+  transition: all 0.1s linear;
+}
+
+.profile-enter-from,
+.profile-leave-to {
+  opacity: 0;
+  transform: translateY(-5px);
 }
 
 .windowShow {
-  animation: windowShow 0.3s ease-in-out;
+  animation: windowShow 0.2s ease-out;
 }
 
 .windowHide {
-  animation: windowHide 0.3s ease-in-out;
+  animation: windowHide 0.2s ease-out;
 }
 
 *::-webkit-scrollbar {
@@ -51,7 +64,7 @@
 
 .nav-enter-active,
 .nav-leave-active {
-  transition: all 0.4s;
+  transition: all 0.4s ease-in-out;
   max-width: 1000px;
 }
 

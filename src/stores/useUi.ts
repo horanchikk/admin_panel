@@ -17,24 +17,10 @@ export const useUi = defineStore("ui", () => {
       link: "/",
       removable: false,
     },
-    {
-      name: "Components",
-      link: "/components",
-      removable: true,
-    },
-    {
-      name: "Stats",
-      link: "/stats",
-      removable: true,
-    },
-    {
-      name: "System",
-      link: "/system",
-      removable: true,
-    },
   ]);
 
   const theme: "dark" | "light" = "dark";
+  const username = "admin";
 
   function updateTabs() {
     for (let tab in tabs.value) {
@@ -42,5 +28,5 @@ export const useUi = defineStore("ui", () => {
     }
   }
 
-  return { showNav, tabs, updateTabs, theme };
+  return { showNav, tabs, updateTabs, theme, username };
 });
